@@ -38,12 +38,12 @@ paths:
           type: string
         - name: skip
           in: query
-          description: Reduce Resultlist
+          description: Skip elements from result list
           required: false
           type: number
         - name: limit
           in: query
-          description: Reduce Resultlist
+          description: Reduce result list
           required: false
           type: number
       responses:

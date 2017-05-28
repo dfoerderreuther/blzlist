@@ -72,9 +72,9 @@ definitions:
         type: string
   BlzResponse:
     required:
-      - message
+      - list
     properties:
-      message:
+      list:
         type: array
         items: 
           $ref: "#/definitions/Blz"

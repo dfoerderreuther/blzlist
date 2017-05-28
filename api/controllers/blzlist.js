@@ -24,9 +24,13 @@ function blzs(req, res) {
     search.blz = {'$regex': blz};
   }
 
+  console.log('Search for: name: ' + name + ', blz: ' + blz + ', skip: ' + skip + ', limit: ' + limit);
+
   BlzModel.find(search, function (err, blzList) {
     if (err) return console.error(err);
-    res.json(blzList);
+    console.log('found elements', blzList.length);
+    var result = { 'list': blzList};
+    res.json(result);
   })
   .skip(skip)
   .limit(limit);
